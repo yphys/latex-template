@@ -1,0 +1,92 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{xcolor}
+\usepackage{braket}
+\numberwithin{equation}{section}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{placeins}
+
+\usepackage{mdframed}
+\newmdenv[
+  roundcorner=6pt,
+  linecolor=black,          % frame color
+  linewidth=1pt,            % thickness of the border
+  innerleftmargin=8pt,      % padding: left
+  innerrightmargin=8pt,     % padding: right
+  innertopmargin=0pt,       % padding: top
+  innerbottommargin=8pt,    % padding: bottom
+  leftmargin=0cm,           % space from left text margin
+  rightmargin=0cm,          % space from right text margin
+  font=\small,
+]{detail}
+
+\usepackage{hyperref}
+
+\hypersetup{
+        bookmarksnumbered,
+        unicode,                        % use with \texorpdfstring
+        colorlinks,                     % avoid stupid boxes
+        citecolor=[rgb]{.9,0,.5},       % \cite
+        urlcolor=[rgb]{0,0,1},  % \href
+        linkcolor=[rgb]{0,.7,0} % \ref , toc
+        }
+
+\usepackage[
+    %backend=biber, 
+    natbib=true,
+    style=numeric,
+    sorting=none
+]{biblatex}
+
+\addbibresource{reference.bib}
+
+\newcommand{\bref}[1]{(\ref{#1})}
+\newcommand{\pd}{\partial}
+\newcommand{\dg}{\dagger}
+\newcommand{\fcomm}[2]{\{\,#1\, , \,#2\,\}}
+\newcommand{\cfcomm}[2]{[\,#1\, , \,#2\,\}}
+\newcommand{\comm}[2]{[\,#1\, , \,#2\,]}
+
+\newcommand{\Hom}{\mathrm{Hom}}
+\newcommand{\Ker}{\mathrm{Ker\,}}
+\newcommand{\Coker}{\mathrm{Coker\,}}
+\newcommand{\Imm}{\mathrm{Im\,}}
+
+\renewcommand{\Im}{\textrm{Im\,}}
+\renewcommand{\Re}{\textrm{Re\,}}
+
+\newcommand{\yp}[1]{{\color{purple} #1}}
+\DeclareMathOperator*{\Res}{Res}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{df}[thm]{Definition}
+\newtheorem{prop}{Proposition}[section]
+
+\newcommand{\qed}{\newline\phantom{a}\hfill$\blacksquare$}
+\renewcommand{\[}{\begin{equation}}
+\renewcommand{\]}{\end{equation}}
+
+\title{Title}
+\author{Yu-Ping Wang}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Section}
+Test references. \cite{Hatsuda:2023dwx}
+
+\printbibliography
+
+\end{document}
